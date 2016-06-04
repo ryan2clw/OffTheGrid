@@ -32,9 +32,9 @@ class ConnectionsVC: UIViewController,UITableViewDelegate, UITableViewDataSource
             //self.connectionsTable.beginUpdates()
             // set service to the textfield
             if networkTextField?.text != nil {
-                chatService.chatServiceName = networkTextField!.text!
-                print("advertising service:")
-                print(chatService.chatServiceName)
+                //chatService.chatServiceName = networkTextField!.text!
+                //print("advertising service:")
+                //print(chatService.chatServiceName)
             }
             // start advertising
             print("advertising started")
@@ -179,7 +179,9 @@ extension ConnectionsVC : ChatServiceManagerDelegate {
     
     func connectedDevicesChanged(manager: ChatServiceManager, connectedDevices: [String]) {
         NSOperationQueue.mainQueue().addOperationWithBlock { () -> Void in
-            print("Connected devices: \(connectedDevices.first)")
+            for device in connectedDevices {
+                print("Connected device: \(device)")
+            }
         }
     }    
     
@@ -190,24 +192,25 @@ extension ConnectionsVC : ChatServiceManagerDelegate {
             // add to connectionVC
             if let navVC = appDelegate.window?.rootViewController as? UINavigationController {
                 for vc in navVC.viewControllers {
-                    /*
+                    
                     if let chatVC = vc as? ChatVC{
                         chatVC.messageTextField.text = message
-                    }*/
+                    }
                     if let connectionVC = vc as? ConnectionsVC {
                         let firstCell = connectionVC.connectionsTable.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! ConnectionsCell
                         firstCell.messageReceivedLabel.text = message
-                        self.playSystemSound()
+                        //self.playSystemSound()
                         print("Should see message: \(message)")
                     }
                 }
             }
         }
     }
+    /*
     func playSystemSound(){
         let systemSoundID: SystemSoundID = 1003
         AudioServicesPlaySystemSound(systemSoundID)
-    }
+    }*/
 }
 
     

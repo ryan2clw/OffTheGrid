@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="2274" y="-149"/>
         </scene>
-        <!--Net DM-->
+        <!--Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Net DM" id="BYZ-38-t0r" customClass="OpeningVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="BYZ-38-t0r" customClass="OpeningVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,8 +53,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="YxK-gI-hrt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-gm-D8q">
-                                <rect key="frame" x="74" y="61" width="267" height="614"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="9Xh-gm-D8q">
+                                <rect key="frame" x="74" y="88" width="267" height="560"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCU-ge-lTo">
                                         <rect key="frame" x="63" y="0.0" width="141" height="41"/>
@@ -63,7 +63,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLL-XO-JNQ">
-                                        <rect key="frame" x="72" y="91" width="124" height="110"/>
+                                        <rect key="frame" x="72" y="82" width="124" height="110"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Photo">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -73,30 +73,30 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's take a selfie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISU-Ph-3YU">
-                                        <rect key="frame" x="68" y="251" width="132" height="21"/>
+                                        <rect key="frame" x="68" y="233" width="132" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3o-zX-qXm">
-                                        <rect key="frame" x="88" y="322" width="92" height="30"/>
+                                        <rect key="frame" x="88" y="295" width="92" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What name should we use for you?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwQ-Pd-oUP">
-                                        <rect key="frame" x="0.0" y="402" width="267" height="21"/>
+                                        <rect key="frame" x="0.0" y="366" width="267" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where next?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRR-za-pOy" userLabel="Where to next?">
-                                        <rect key="frame" x="86" y="473" width="96" height="21"/>
+                                        <rect key="frame" x="86" y="428" width="96" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="N1u-hO-ocw" userLabel="Button Stack View">
-                                        <rect key="frame" x="42" y="544" width="183" height="70"/>
+                                        <rect key="frame" x="42" y="490" width="183" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0W-gh-bzO">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -144,7 +144,7 @@
                             <constraint firstItem="9Xh-gm-D8q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ozS-Rv-wNF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VWR-ob-Gir"/>
+                    <navigationItem key="navigationItem" title="Profile" id="VWR-ob-Gir"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="chatButton" destination="r9F-pG-ErH" id="gWK-mc-eVg"/>
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1790" y="-149"/>
         </scene>
-        <!--ConnectionsVC-->
+        <!--Connects-->
         <scene sceneID="JbD-Jl-ESP">
             <objects>
-                <viewController title="ConnectionsVC" id="Exa-nQ-UqK" customClass="ConnectionsVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Connects" id="Exa-nQ-UqK" customClass="ConnectionsVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uYO-dj-v8R"/>
                         <viewControllerLayoutGuide type="bottom" id="pAK-jd-ehI"/>
@@ -175,18 +175,18 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DirectMessage" translatesAutoresizingMaskIntoConstraints="NO" id="pgo-kV-mdK">
                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                 <items>
-                                    <navigationItem title="Chat" id="lVt-c3-CJl">
+                                    <navigationItem title="Items" id="lVt-c3-CJl">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="2ij-Hl-DhJ">
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="showDetail" identifier="segueToOpeningVC" action="showViewController:sender:" id="yhL-Kr-Jfp"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="pKM-MT-aL7"/>
+                                        <barButtonItem key="rightBarButtonItem" image="Settings" id="rhO-Mp-EwV"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mwA-1I-iAs">
-                                <rect key="frame" x="0.0" y="123" width="414" height="613"/>
+                                <rect key="frame" x="0.0" y="62" width="414" height="674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="connectionsCell" id="8HU-ua-DzD" customClass="ConnectionsCell" customModule="NetDM" customModuleProvider="target">
@@ -251,7 +251,7 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-5i-xuz">
-                                <rect key="frame" x="0.0" y="80" width="414" height="31"/>
+                                <rect key="frame" x="0.0" y="25" width="414" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMb-NF-cA7">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -294,17 +294,17 @@
                         <outlet property="connectionSwitch" destination="xMb-NF-cA7" id="8kO-hg-LNw"/>
                         <outlet property="connectionsTable" destination="mwA-1I-iAs" id="CUb-Nd-iD8"/>
                         <outlet property="networkTextField" destination="PnD-F6-MF9" id="B5C-XS-As2"/>
-                        <segue destination="ljb-4V-UFI" kind="presentation" identifier="segueToChat" id="Nc3-ny-6Xe"/>
+                        <segue destination="ljb-4V-UFI" kind="show" identifier="segueToChat" id="Nc3-ny-6Xe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bf0-sp-QbM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1256" y="775"/>
         </scene>
-        <!--ChatVC-->
+        <!--Chat-->
         <scene sceneID="SxS-mm-6Yr">
             <objects>
-                <viewController title="ChatVC" id="ljb-4V-UFI" customClass="ChatVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chat" id="ljb-4V-UFI" customClass="ChatVC" customModule="NetDM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ptY-eZ-KWQ"/>
                         <viewControllerLayoutGuide type="bottom" id="8wO-Yh-7TK"/>
@@ -327,28 +327,40 @@
                                             <constraint firstAttribute="width" secondItem="nWs-QW-2Ue" secondAttribute="height" multiplier="5:5" id="1hw-bi-IhV"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="sendButtonHit:" destination="ljb-4V-UFI" eventType="touchUpInside" id="pcF-Wi-YC3"/>
+                                            <action selector="sendButtonHit:" destination="ljb-4V-UFI" eventType="touchUpInside" id="1uT-6y-XBT"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynz-7Z-GTD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                <items>
+                                    <navigationItem title="Title" id="xUK-Xb-zVZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="yL4-Tq-REl"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ynz-7Z-GTD" firstAttribute="centerX" secondItem="XnU-Ox-JFg" secondAttribute="centerX" id="0hl-V1-Hwn"/>
+                            <constraint firstItem="ynz-7Z-GTD" firstAttribute="top" secondItem="XnU-Ox-JFg" secondAttribute="top" id="MwJ-94-vT7"/>
+                            <constraint firstItem="ynz-7Z-GTD" firstAttribute="height" secondItem="XnU-Ox-JFg" secondAttribute="height" multiplier="0.05" id="WSq-F3-SVU"/>
                             <constraint firstItem="ZU2-dn-lv1" firstAttribute="centerX" secondItem="XnU-Ox-JFg" secondAttribute="centerX" id="Zyg-GO-Rrk"/>
+                            <constraint firstItem="ynz-7Z-GTD" firstAttribute="width" secondItem="XnU-Ox-JFg" secondAttribute="width" id="l2A-i1-M9l"/>
                             <constraint firstAttribute="bottom" secondItem="ZU2-dn-lv1" secondAttribute="bottom" multiplier="1.02" id="ux4-tM-HoZ"/>
                             <constraint firstItem="wzC-B4-Qfw" firstAttribute="width" secondItem="XnU-Ox-JFg" secondAttribute="width" multiplier="0.6" id="yXv-HM-Acf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="messageTextField" destination="wzC-B4-Qfw" id="NuY-VF-W9V"/>
-                        <outlet property="sendButton" destination="nWs-QW-2Ue" id="0RX-lj-gbC"/>
-                        <outlet property="stackViewConstraint" destination="ux4-tM-HoZ" id="QNB-J2-z9x"/>
+                        <outlet property="messageTextField" destination="wzC-B4-Qfw" id="9Up-OG-oVa"/>
+                        <outlet property="sendButton" destination="nWs-QW-2Ue" id="q4b-GD-uXT"/>
+                        <outlet property="stackViewConstraint" destination="ux4-tM-HoZ" id="NDQ-o7-eqr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvu-DV-uQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="806"/>
+            <point key="canvasLocation" x="1777" y="794"/>
         </scene>
         <!--InitialStack-->
         <scene sceneID="4rH-Oj-4IL">
@@ -371,6 +383,7 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
+        <image name="Settings" width="42" height="39"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yhL-Kr-Jfp"/>

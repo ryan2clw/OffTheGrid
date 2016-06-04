@@ -60,9 +60,12 @@ class ChatVC: UIViewController, UITextFieldDelegate {
         sendButton.layer.borderWidth = 1
         messageTextField.layer.cornerRadius = 5
         messageTextField.layer.borderWidth = 1
+        
         /*
-        let greyView = UIImageView(image: UIImage(named: "GreyDialogueBox"))
-        greyView.frame = CGRect(x: 0, y: self.view.frame.height*0.76, width: self.view.frame.width*0.75, height: self.view.frame.height*0.2)
+         
+         TROUBLESHOOT, NOT VISIBLE
+         
+
         let greyTextView = UITextView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width*0.95, height: self.view.frame.height*0.95))
         let lorem = "Lorem ipsum epluribus unum. Maximus quintas blah, blah, blah. And many other things."
         greyTextView.attributedText = NSAttributedString(string: lorem, attributes: [:])
@@ -70,9 +73,20 @@ class ChatVC: UIViewController, UITextFieldDelegate {
         greyTextView.editable = false
         greyView.addSubview(greyTextView)
         view.addSubview(greyView)*/
+        
         let blueView = UIImageView(image: UIImage(named: "BlueDialogueBox"))
-        blueView.frame = CGRect(x: self.view.frame.width*0.25, y: self.view.frame.height*0.56, width: self.view.frame.width*0.75, height: self.view.frame.height*0.2)
+        blueView.frame = CGRect(x: self.view.frame.width*0.25, y: self.view.frame.height*0.52, width: self.view.frame.width*0.75, height: self.view.frame.height*0.2)
         view.addSubview(blueView)
+        let greyView = UIImageView(image: UIImage(named: "GreyDialogueBox"))
+        greyView.frame = CGRect(x: 0, y: self.view.frame.height*0.72, width: self.view.frame.width*0.75, height: self.view.frame.height*0.2)
+        view.addSubview(greyView)
+        
+        
+        
+        /* 
+         
+         TEST FOR REDUNDANCY
+         
         if let navVC = appDelegate.window?.rootViewController as? UINavigationController{
             let myViewControllers = navVC.viewControllers
             for vc in myViewControllers{
@@ -82,6 +96,7 @@ class ChatVC: UIViewController, UITextFieldDelegate {
                     print("Set ChatVC to the same service manager as the last one, redundant I beleive")
                 }
             }
-        }
+        }*/
+        
     }
 }

@@ -20,7 +20,7 @@ protocol ChatServiceManagerDelegate {
 
 class ChatServiceManager : NSObject {
     
-    var chatServiceName = "NetDM"
+    private let chatServiceName = "NetDM"
     private let myPeerId = MCPeerID(displayName: UIDevice.currentDevice().name)
     let serviceAdvertiser : MCNearbyServiceAdvertiser
     let serviceBrowser : MCNearbyServiceBrowser
@@ -116,11 +116,13 @@ extension ChatServiceManager : MCSessionDelegate {
             let navVC = appDelegate.window?.rootViewController as! UINavigationController
             print("Updating the UI from the background thread with the connected device name")
             for vc in navVC.viewControllers{
-                if vc.title == "ConnectionsVC" {
+                if vc.title == "Connects" {
+                    print("Found connections view controller")
                     let connectionsVC = vc as! ConnectionsVC
                     let connections = connectionsVC.connections
                     for connectedPeer in self.session.connectedPeers {
                         let newConnection = connectedPeer.displayName
+                        
                         print(newConnection)
                         // makes array like a dictionary, one unique key per connection
                         //let connections = connectionsVC.connections
