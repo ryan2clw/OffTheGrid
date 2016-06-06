@@ -175,17 +175,10 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="DirectMessage" translatesAutoresizingMaskIntoConstraints="NO" id="pgo-kV-mdK">
                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                                 <items>
-                                    <navigationItem title="Items" id="lVt-c3-CJl">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="2ij-Hl-DhJ">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="showDetail" identifier="segueToOpeningVC" action="showViewController:sender:" id="yhL-Kr-Jfp"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" image="Settings" id="rhO-Mp-EwV"/>
-                                    </navigationItem>
+                                    <navigationItem title="Items" id="lVt-c3-CJl"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mwA-1I-iAs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mwA-1I-iAs">
                                 <rect key="frame" x="0.0" y="62" width="414" height="674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -250,7 +243,7 @@
                                     <outlet property="delegate" destination="Exa-nQ-UqK" id="L9s-fJ-NKP"/>
                                 </connections>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-5i-xuz">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-5i-xuz">
                                 <rect key="frame" x="0.0" y="25" width="414" height="31"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMb-NF-cA7">
@@ -383,9 +376,5 @@
     </scenes>
     <resources>
         <image name="Background" width="375" height="667"/>
-        <image name="Settings" width="42" height="39"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="yhL-Kr-Jfp"/>
-    </inferredMetricsTieBreakers>
 </document>
