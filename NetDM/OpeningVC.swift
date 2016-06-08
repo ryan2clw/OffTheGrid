@@ -111,7 +111,6 @@ class OpeningVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerD
                 nameLabel.text = user.userName!
                 userState = .HasName
             }
-
         }
         do{
             print("Saving user")

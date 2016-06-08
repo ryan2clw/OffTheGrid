@@ -92,7 +92,6 @@ extension ChatServiceManager : MCNearbyServiceBrowserDelegate {
     func browser(browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         NSLog("%@", "lostPeer: \(peerID)")
         // reload table to reflect lost connection
-        
         self.reloadConnectionTable()
     }
 }

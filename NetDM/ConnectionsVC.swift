@@ -14,35 +14,21 @@ import AVFoundation
 
 class ConnectionsVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    // TO DO: Check that the tableView reloads dynamically based on connections.count
-    
     @IBOutlet weak var networkTextField: UITextField!
     @IBOutlet weak var connectionsTable: UITableView!
     @IBOutlet weak var connectionSwitch: UISwitch!
     
     var connections:[String] = []
     var user:User!
-    
     let chatService = ChatServiceManager()
     
     @IBAction func connectionSwitchHit(sender: AnyObject) {
         if connectionSwitch.on{
             print("reloading cells")
-            reloadTableCells()
-            //self.connectionsTable.beginUpdates()
-            // set service to the textfield
-            if networkTextField?.text != nil {
-                //chatService.chatServiceName = networkTextField!.text!
-                //print("advertising service:")
-                //print(chatService.chatServiceName)
-            }
-            // start advertising
             print("advertising started")
             chatService.serviceAdvertiser.startAdvertisingPeer()
             chatService.serviceBrowser.startBrowsingForPeers()
-            //let cell = self.connectionsTable.cellForRowAtIndexPath(NSIndexPath(forRow: connections.count, inSection: 0)) as! ConnectionsCell
             reloadTableCells()
-            
         }else{
             // stop connections when switch is off
             chatService.serviceAdvertiser.stopAdvertisingPeer()
@@ -77,17 +63,9 @@ class ConnectionsVC: UIViewController,UITableViewDelegate, UITableViewDataSource
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier! == "segueToOpeningVC" {
-            print("Returning to Opening Scene")
             let openingVC = segue.destinationViewController as! OpeningVC
             openingVC.userState = UserState.HasPicture
             openingVC.respondToUserState(openingVC.userState)
-            print("Told OpeningVC to act like it know")
-        }
-        if segue.identifier == "segueToChatVC" {
-            print("Found chat segue")
-            let chatVC = segue.destinationViewController as! ChatVC
-// NOT SURE REMOVE CODE HERE
-            chatVC.chatServiceManager = self.chatService
         }
         super.prepareForSegue(segue, sender: sender)
     }
@@ -147,14 +125,8 @@ class ConnectionsVC: UIViewController,UITableViewDelegate, UITableViewDataSource
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Row selected: \(indexPath.row)")
         self.performSegueWithIdentifier("segueToChat", sender: self)
     }
-    /*
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Row selected: \(indexPath.row)")
-        self.performSegueWithIdentifier("segueToChat", sender: self)
-    }*/
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard
@@ -199,18 +171,21 @@ extension ConnectionsVC : ChatServiceManagerDelegate {
                     if let connectionVC = vc as? ConnectionsVC {
                         let firstCell = connectionVC.connectionsTable.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as! ConnectionsCell
                         firstCell.messageReceivedLabel.text = message
-                        //self.playSystemSound()
+                        self.playSystemSound()
                         print("Should see message: \(message)")
                     }
                 }
             }
         }
     }
-    /*
+    
     func playSystemSound(){
         let systemSoundID: SystemSoundID = 1003
         AudioServicesPlaySystemSound(systemSoundID)
-    }*/
+    }
+    func vibratePhone(alertSoundID: SystemSoundID){
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+    }
 }
 
     
